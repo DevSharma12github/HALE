@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="SOS.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>EMERGENCY</title>
+  </head>
+  <body>
+    <h2 style="color: rgb(255, 62, 62)">EMERGENCY</h2>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <h1>Alert</h1>
+          <span>Hale will help you heal</span>
+          <div class="input-field">
+            <input type="text" placeholder="Name" />
+            <input type="tel" placeholder="Phone no." />
+          </div>
+          <a href="map2.html"><button>Location</button></a>
+          <br />
+          <button>Alert</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>Book An Ambulance</h1>
+          <span>Hale will help you heal</span>
+          <input type="text" placeholder="Name" />
+          <input type="tel" placeholder="Phone no." />
+          <br />
+          <a href="map2.html"><button>Location</button></a>
+          <br />
+          <button>Book</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Keep strong!</h1>
+            <p>Hale is there to your rescue</p>
+            <button class="ghost" id="signIn">Book Ambulance</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Do Not Panic!</h1>
+            <p>
+              Hale will send an alert and your current location to the closest
+              medical facility
+            </p>
+            <button class="ghost" id="signUp">Alert Facility</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const signUpButton = document.getElementById("signUp");
+    const signInButton = document.getElementById("signIn");
+    const container = document.getElementById("container");
+
+    signUpButton.addEventListener("click", () => {
+      container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener("click", () => {
+      container.classList.remove("right-panel-active");
+    });
+  </script>
+</html>
